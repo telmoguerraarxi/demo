@@ -23,8 +23,7 @@ class MailThread(models.AbstractModel):
             user_id = self._mail_find_user_for_gateway(email_from, alias=dest_aliases).id or self._uid
 
             new_model = 'note.note'
-            note =  self.env.ref('email_to_note.note_email_without_route', raise_if_not_found=False)
-            new_thread_id = note or note.id
+            new_thread_id = self.env.ref('email_to_note.note_email_without_route', raise_if_not_found=False).id or False
             route = self._routing_check_route(
                 message, message_dict,
                 (new_model, new_thread_id, custom_values, user_id, dest_aliases),
