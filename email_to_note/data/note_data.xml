@@ -1,0 +1,8 @@
+<odoo noupdate="1">
+    <record id="note_email_without_route" model="note.note">
+        <field name="name">EMAILS SEM ROTAS #349872</field>
+        <field name="memo"><![CDATA[<b>EMAILS SEM ROTAS #349872</b>]]></field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="color">2</field>
+    </record>
+</odoo>
