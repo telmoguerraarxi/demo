@@ -1,6 +1,6 @@
 import logging
 
-from odoo import api, models, tools
+from odoo import api, models, tools, _
 
 _logger = logging.getLogger(__name__)
 
